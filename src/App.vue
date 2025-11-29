@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useBackButton } from '@/composables/useBackButton';
+import { useBackButton } from '@/composables/use-back-button'
 
-useBackButton();
+useBackButton()
 </script>
 
 <template>

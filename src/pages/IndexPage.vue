@@ -1,22 +1,36 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { routes } from '@/router';
-import AppPage from '@/components/AppPage.vue';
-import AppLink from '@/components/AppLink.vue';
+import { computed } from 'vue'
 
-const nonIndexRoutes = computed(() => routes.filter((r) => !!r.meta?.title));
+import AppLink from '@/components/AppLink.vue'
+import AppPage from '@/components/AppPage.vue'
+import { routes } from '@/router'
+
+const nonIndexRoutes = computed(() => routes.filter((r) => !!r.meta?.title))
 </script>
 
 <template>
-  <AppPage title="Home Page" :back="false">
+  <AppPage
+    title="Home Page"
+    :back="false"
+  >
     <p>
-      This page is a home page in this boilerplate. You can use the links below to visit other
-      pages with their own functionality.
+      This page is a home page in this boilerplate. You can use the links below
+      to visit other pages with their own functionality.
     </p>
     <ul class="index-page__links">
-      <li v-for="route in nonIndexRoutes" :key="route.name" class="index-page__link-item">
-        <AppLink class="index-page__link" :to="{ name: route.name }">
-          <i v-if="route.meta?.icon" class="index-page__link-icon">
+      <li
+        v-for="route in nonIndexRoutes"
+        :key="route.name"
+        class="index-page__link-item"
+      >
+        <AppLink
+          class="index-page__link"
+          :to="{ name: route.name }"
+        >
+          <i
+            v-if="route.meta?.icon"
+            class="index-page__link-icon"
+          >
             <component :is="route.meta.icon" />
           </i>
           {{ route.meta!.title }}
