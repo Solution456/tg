@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import MenuProductItemCard from '@/module/menu/components/card/MenuProductItemCard.vue'
-import MenuProductCategorySlider from '@/module/menu/components/MenuProductCategorySlider.vue'
-import { useProducts } from '@/module/product/composables/use-products'
-import type { ProductCategoryType } from '@/module/product/types'
+import MenuProductItemCard from '@/modules/menu/components/card/MenuProductItemCard.vue'
+import MenuProductCategorySlider from '@/modules/menu/components/MenuProductCategorySlider.vue'
+import { useProducts } from '@/modules/product/composables/use-products'
+import type { ProductCategoryType } from '@/modules/product/types'
 import AppPageLayout from '@/shared/layouts/AppPageLayout.vue'
 
 const { selectedCategoryProducts, selectedProductsCategory } = useProducts()

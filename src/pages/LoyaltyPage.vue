@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import LoyaltyCard from '@/module/loyalty/components/LoyaltyCard.vue'
-import { useLoyalty } from '@/module/loyalty/composables/use-loyalty'
+import LoyaltyCard from '@/modules/loyalty/components/LoyaltyCard.vue'
+import { useLoyalty } from '@/modules/loyalty/composables/use-loyalty'
 import AppPageLayout from '@/shared/layouts/AppPageLayout.vue'
 
 const { loyalty } = useLoyalty()

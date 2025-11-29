@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Product } from '@/module/product/types'
+import type { Product } from '@/modules/product/types'
 import { BaseCard } from '@/shared/components/base/card'
 
 defineProps<{

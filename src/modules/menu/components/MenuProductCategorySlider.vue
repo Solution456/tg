@@ -2,8 +2,8 @@
 import {
   PRODUCT_CATEGORY_LIST,
   type ProductCategoryListItem
-} from '@/module/product/constants/product-category-list'
-import type { ProductCategoryType } from '@/module/product/types'
+} from '@/modules/product/constants/product-category-list'
+import type { ProductCategoryType } from '@/modules/product/types'
 import BaseBadge from '@/shared/components/base/BaseBadge.vue'
 
 const emit = defineEmits<{
