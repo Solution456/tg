@@ -21,6 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eruda": "^3.4.1",
+    "reka-ui": "^2.6.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17",
     "vue": "^3.5.22",
