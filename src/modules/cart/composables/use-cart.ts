@@ -9,7 +9,7 @@ const [injectCartContext, provideCartContext] =
   createContext<ReturnType<typeof createCartContext>>('Cart')
 
 export function useCart() {
-  let ctx = injectCartContext()
+  let ctx = injectCartContext(null)
 
   if (!ctx) {
     ctx = createCartContext()

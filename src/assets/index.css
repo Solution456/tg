@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(0,0,0, .10);
@@ -163,9 +164,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
