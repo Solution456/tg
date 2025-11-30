@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { useBackButton } from '@/composables/use-back-button'
+import { useCart } from './modules/cart/composables/use-cart'
+
+import { useBackButton } from '@/shared/composables/use-back-button'
 
 useBackButton()
+
+// GLOBAL-CONTEXT
+useCart()
 </script>
 
 <template>

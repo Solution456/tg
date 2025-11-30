@@ -4,10 +4,10 @@ import { retrieveLaunchParams } from '@tma.js/sdk-vue'
 // Mock the environment in case, we are outside Telegram.
 import './mock-env'
 
+import router from './shared/router'
 import App from './App.vue'
 import { errorHandler } from './error-handler'
 import { init } from './init'
-import router from './router'
 
 import './assets/index.css'
 
