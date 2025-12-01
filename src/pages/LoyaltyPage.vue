@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 import LoyaltyCard from '@/modules/loyalty/components/LoyaltyCard.vue'
 import { useLoyalty } from '@/modules/loyalty/composables/use-loyalty'
 import AppPageLayout from '@/shared/layouts/AppPageLayout.vue'
 
-const { loyalty } = useLoyalty()
+const { loyalty, getLoyalty } = useLoyalty()
 
-// TODO запрос
+// TODO: userrId
+onMounted(() => getLoyalty('1'))
 </script>
 
 <template>

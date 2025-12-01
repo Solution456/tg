@@ -1,16 +1,20 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 import MenuProductItemCard from '@/modules/menu/components/card/MenuProductItemCard.vue'
 import MenuProductCategorySlider from '@/modules/menu/components/MenuProductCategorySlider.vue'
 import { useProducts } from '@/modules/product/composables/use-products'
 import type { ProductCategoryType } from '@/modules/product/types'
 import AppPageLayout from '@/shared/layouts/AppPageLayout.vue'
 
-const { selectedCategoryProducts, selectedProductsCategory } = useProducts()
+const { selectedCategoryProducts, selectedProductsCategory, getProducts } =
+  useProducts()
 
 function selectProductCategory(value: ProductCategoryType) {
   selectedProductsCategory.value = value
 }
 
+onMounted(() => getProducts())
 // TODO: запросы / корзина
 </script>
 
