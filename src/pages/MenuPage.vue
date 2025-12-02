@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
 import MenuProductItemCard from '@/modules/menu/components/card/MenuProductItemCard.vue'
+import MenuProductDetailDialog from '@/modules/menu/components/dialog/MenuProductDetailDialog.vue'
 import MenuProductCategorySlider from '@/modules/menu/components/MenuProductCategorySlider.vue'
 import { useProducts } from '@/modules/product/composables/use-products'
-import type { ProductCategoryType } from '@/modules/product/types'
+import type { Product, ProductCategoryType } from '@/modules/product/types'
 import AppPageLayout from '@/shared/layouts/AppPageLayout.vue'
 
 const { selectedCategoryProducts, selectedProductsCategory, getProducts } =
@@ -14,11 +15,20 @@ function selectProductCategory(value: ProductCategoryType) {
   selectedProductsCategory.value = value
 }
 
+const selectedMenuProduct = ref<Product | null>(null)
+
+function selectMenuProduct(product: Product) {
+  selectedMenuProduct.value = product
+}
+
 onMounted(() => getProducts())
-// TODO: запросы / корзина
 </script>
 
 <template>
+  <MenuProductDetailDialog
+    v-if="selectedMenuProduct"
+    :selected-menu-product="selectedMenuProduct"
+  />
   <AppPageLayout
     title="Меню"
     description="Вкусная традиционная кухня"
@@ -34,6 +44,7 @@ onMounted(() => getProducts())
           v-for="product of selectedCategoryProducts"
           :key="product.id"
           :product="product"
+          @click="selectMenuProduct(product)"
         />
       </div>
     </div>

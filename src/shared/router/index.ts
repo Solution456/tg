@@ -17,8 +17,8 @@ export const routes = [
     component: () => import('@/pages/LoyaltyPage.vue')
   },
   {
-    path: '/orders',
-    name: 'orders',
+    path: '/my-orders',
+    name: 'my-orders',
     component: () => import('@/pages/OrdersPage.vue')
   },
   {

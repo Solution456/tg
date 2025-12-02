@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 import OrderEmpty from '@/modules/orders/components/OrderEmpty..vue'
 import OrdersExistView from '@/modules/orders/components/OrdersExistView.vue'
 import { useOrders } from '@/modules/orders/composables/use-orders'
 
-const { orders } = useOrders()
+const { orders, getMyOrders } = useOrders()
 
-// TODO: API
+onMounted(getMyOrders)
 </script>
 
 <template>

@@ -3,14 +3,13 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import mkcert from 'vite-plugin-mkcert'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
   base: '/vuejs-template',
   plugins: [
     vue(),
-    vueDevTools(),
+    // vueDevTools(),
     tailwindcss(),
     // Creates a custom SSL certificate valid for the local machine.
     // Using this plugin requires admin rights on the first dev-mode launch.
